@@ -27,7 +27,7 @@ public class Door
         SetParent();
     }
 
-    // Сдвиг оси вращения.
+    // Сдвиг оси вращения. - поправить документацию
     public void Movement()
     {
         if (left)
