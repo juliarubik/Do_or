@@ -2,15 +2,15 @@
 
 public class Door
 {
-    private GameObject DoorController;
+    private GameObject doorController;
 
-    private GameObject DoorBody;
+    private GameObject doorBody;
 
-    private float rotation;
+    private float rotationAngle;
 
-    private float speed;
+    private float rotationSpeed;
 
-    private bool left;
+    private bool isLeft;
 
     private bool isOpen;
 
