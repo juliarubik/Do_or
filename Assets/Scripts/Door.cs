@@ -25,10 +25,13 @@ public class Door
         this.rotation = rotation;
         this.speed = speed;
         this.isOpen = isOpen;
+        
         doorController = Object.Instantiate(Resources.Load(door_controller, typeof(GameObject))) as GameObject;
         doorBody = Object.Instantiate(Resources.Load(door_body, typeof(GameObject))) as GameObject;
+        
         Shift(isLeft);
-        doorBody.transform.parent = doorController.transform;
+        
+        doorBody.transform.parent = doorController.transform;        
     }
 
     public void OpenClose()
@@ -38,12 +41,7 @@ public class Door
         doorController.transform.rotation = Quaternion.Slerp
         (
             doorController.transform.rotation,
-            Quaternion.Euler
-            (
-                doorController.transform.rotation.x,
-                rotation,
-                doorController.transform.rotation.z
-            ),
+            Quaternion.Euler(doorController.transform.rotation.x, rotation, doorController.transform.rotation.z),
             speed * Time.deltaTime
         );
     }
