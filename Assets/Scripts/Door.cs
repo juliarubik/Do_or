@@ -12,8 +12,6 @@ public class Door
 
     private bool isOpen;
 
-    private bool isLeft;
-
     public Door
         (
         bool isLeft, 
