@@ -12,29 +12,21 @@ public class Door
 
     private bool isOpen;
 
-    public Door
-        (
-        bool isLeft, 
-        bool isOpen, 
-        float rotation = 120, 
-        float speed = 5, 
-        string door_controller = "DoorController", 
-        string door_body = "DoorBody"
-        )
+    public Door( bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
     {
         this.rotation = rotation;
         this.speed = speed;
         this.isOpen = isOpen;
-        
+
         doorController = Object.Instantiate(Resources.Load(door_controller, typeof(GameObject))) as GameObject;
         doorBody = Object.Instantiate(Resources.Load(door_body, typeof(GameObject))) as GameObject;
-        
+
         Shift(isLeft);
-        
-        doorBody.transform.parent = doorController.transform;        
+
+        doorBody.transform.parent = doorController.transform;
     }
 
-    public void OpenClose()
+    public void openClose()
     {
         rotation = isOpen ? rotation : 0;
 
