@@ -23,5 +23,4 @@ public class CreatePrefab : MonoBehaviour
         door3.OpenClose();
         door4.OpenClose();
     }
-
 }

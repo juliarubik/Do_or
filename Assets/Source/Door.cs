@@ -12,7 +12,7 @@ public class Door
 
     private bool isOpen;
 
-    public Door( bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
+    public Door(bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
     {
         this.rotation = rotation;
         this.speed = speed;
@@ -21,7 +21,7 @@ public class Door
         doorController = Object.Instantiate(Resources.Load(door_controller, typeof(GameObject))) as GameObject;
         doorBody = Object.Instantiate(Resources.Load(door_body, typeof(GameObject))) as GameObject;
 
-        Shift(isLeft);
+        shift(isLeft);
 
         doorBody.transform.parent = doorController.transform;
     }
@@ -39,7 +39,7 @@ public class Door
     }
 
     // Сдвиг оси вращения.
-    private void Shift(bool isLeft)
+    private void shift(bool isLeft)
     {
         float width = doorBody.transform.localScale.z / 2;
 

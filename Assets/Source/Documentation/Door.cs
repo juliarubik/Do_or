@@ -38,15 +38,7 @@ public class Door
     /// подгрузить из папки "Resources" в качестве пустышки двери.</param>
     /// <param name="door_body">Название объекта, которое небходимо
     /// подгрузить из папки "Resources" в качестве тела двери.</param>
-    public Door
-        (
-        bool isLeft, 
-        bool isOpen, 
-        float rotation = 120, 
-        float speed = 5, 
-        string door_controller = "DoorController", 
-        string door_body = "DoorBody"
-        )
+    public Door(bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
     {
         this.rotation = rotation;
         this.speed = speed;
@@ -58,7 +50,7 @@ public class Door
         doorController = Object.Instantiate(Resources.Load(door_controller, typeof(GameObject))) as GameObject;
         doorBody = Object.Instantiate(Resources.Load(door_body, typeof(GameObject))) as GameObject;
 
-        Shift(isLeft);
+        shift(isLeft);
 
         /// <summary>
         /// Делает тело двери дочерним относительно пустышки.
@@ -84,7 +76,7 @@ public class Door
     /// Функция сдвига оси вращения двери.
     /// </summary>
     /// <param name="isLeft">В какую сторону необходимо сдвинуть ось вращения.</param>
-    private void Shift(bool isLeft)
+    private void shift(bool isLeft)
     {
         /// <summary>
         /// Половина ширины двери.
