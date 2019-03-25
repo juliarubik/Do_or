@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Класс Door предоставляет конструктор с параметрами, 
@@ -38,8 +38,8 @@ public class Door
     /// подгрузить из папки "Resources" в качестве пустышки двери.</param>
     /// <param name="door_body">Название объекта, которое небходимо
     /// подгрузить из папки "Resources" в качестве тела двери.</param>
-public class Door
-{
+    public Door(bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
+    {
         this.rotation = rotation;
         this.speed = speed;
         this.isOpen = isOpen;
@@ -47,8 +47,8 @@ public class Door
         /// <summary>
         /// Создаются объект пустышки и объект тела двери.
         /// </summary>
-        doorController = Object.Instantiate(Prefabs.Load(door_controller, typeof(GameObject))) as GameObject;
-        doorBody = Object.Instantiate(Prefabs.Load(door_body, typeof(GameObject))) as GameObject;
+        doorController = Object.Instantiate(Resources.Load(door_controller, typeof(GameObject))) as GameObject;
+        doorBody = Object.Instantiate(Resources.Load(door_body, typeof(GameObject))) as GameObject;
 
         shift(isLeft);
 
@@ -72,7 +72,6 @@ public class Door
             speed * Time.deltaTime
         );
     }
-
     /// <summary>
     /// Функция сдвига оси вращения двери.
     /// </summary>
