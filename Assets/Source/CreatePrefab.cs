@@ -7,14 +7,14 @@
 /// Через параметры можно задать скорость, угол и ось вращения
 /// двери отдельно для каждого экземпляра.
 /// </remarks>
-public class CreatePrefab : MonoBehaviour
+public class CreatePrefab: MonoBehaviour
 {
     /// <summary>
     /// Здесь объявляются экземпляры класса Door.
     /// </summary>
-    private Door _door1;
-    private Door _door2;
-    private Door _door3;
+    private Door door1;
+    private Door door2;
+    private Door door3;
 
     /// <summary>
     /// Здесь создаются экземпляры класса Door.
@@ -24,9 +24,9 @@ public class CreatePrefab : MonoBehaviour
         /// <example>
         /// Примеры экземпляров (Параметры можно передавать любые).
         /// </example>
-        _door1 = new Door(true, true);
-        _door2 = new Door(false, true, rotation: 50, speed: 8);
-        _door3 = new Door(false, true, rotation: 180, speed: 1);
+        door1 = new Door(true, true);
+        door2 = new Door(false, true, rotation: 50, speed: 8);
+        door3 = new Door(false, true, rotation: 180, speed: 1);
     }
 
     /// <summary>
@@ -35,8 +35,8 @@ public class CreatePrefab : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        _door1.OpenClose();
-        _door2.OpenClose();
-        _door3.OpenClose();
+        door1.OpenClose();
+        door2.OpenClose();
+        door3.OpenClose();
     }
 }

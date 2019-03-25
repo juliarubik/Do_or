@@ -38,8 +38,8 @@ public class Door
     /// подгрузить из папки "Resources" в качестве пустышки двери.</param>
     /// <param name="door_body">Название объекта, которое небходимо
     /// подгрузить из папки "Resources" в качестве тела двери.</param>
-public class Door
-{
+	public class Door(bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
+	{
         this.rotation = rotation;
         this.speed = speed;
         this.isOpen = isOpen;
@@ -86,11 +86,9 @@ public class Door
 
         width = isLeft ? ((-1) * width) : width;
 
-        doorController.transform.position = new Vector3
-        (
-            doorController.transform.position.x, 
-            doorController.transform.position.y, 
-            doorController.transform.position.z + width
-        );
+        doorController.transform.position = new Vector3(
+		doorController.transform.position.x, 
+		doorController.transform.position.y, 
+		doorController.transform.position.z + width);
     }
 }
