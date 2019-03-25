@@ -34,11 +34,11 @@ public class Door
     /// <param name="isOpen">Открыть или закрыть дверь.</param>
     /// <param name="rotation">Угол вращения двери.</param>
     /// <param name="speed">Скорость вращения двери.</param>
-    /// <param name="door_controller">Название объекта, которое необходимо
+    /// <param name="doorController">Название объекта, которое необходимо
     /// подгрузить из папки "Resources" в качестве пустышки двери.</param>
-    /// <param name="door_body">Название объекта, которое небходимо
+    /// <param name="doorBody">Название объекта, которое небходимо
     /// подгрузить из папки "Resources" в качестве тела двери.</param>
-	public class Door(bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string door_controller = "DoorController", string door_body = "DoorBody")
+	public Door(bool isLeft, bool isOpen, float rotation = 120, float speed = 5, string doorController = "DoorController", string doorBody = "DoorBody")
 	{
         this.rotation = rotation;
         this.speed = speed;
@@ -47,15 +47,15 @@ public class Door
         /// <summary>
         /// Создаются объект пустышки и объект тела двери.
         /// </summary>
-        doorController = Object.Instantiate(Prefabs.Load(door_controller, typeof(GameObject))) as GameObject;
-        doorBody = Object.Instantiate(Prefabs.Load(door_body, typeof(GameObject))) as GameObject;
+        this.doorController = Object.Instantiate(Prefabs.Load(doorController, typeof(GameObject))) as GameObject;
+        this.doorBody = Object.Instantiate(Prefabs.Load(doorBody, typeof(GameObject))) as GameObject;
 
         shift(isLeft);
 
         /// <summary>
         /// Делает тело двери дочерним относительно пустышки.
         /// </summary>
-        doorBody.transform.parent = doorController.transform;
+        this.doorBody.transform.parent = this.doorController.transform;
     }
 
     /// <summary>

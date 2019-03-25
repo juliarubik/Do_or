@@ -280,3 +280,6 @@ C:\Users\Julia\Desktop\работа\Do_or\obj\Debug\Assembly-CSharp.csproj.CoreC
 C:\Users\Julia\Desktop\работа\Do_or\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Julia\Desktop\работа\Do_or\obj\Debug\Assembly-CSharp.dll
 C:\Users\Julia\Desktop\работа\Do_or\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Dmitry\Documents\Door\Door\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Dmitry\Documents\Door\Door\obj\Debug\Assembly-CSharp.dll
+C:\Users\Dmitry\Documents\Door\Door\obj\Debug\Assembly-CSharp.pdb
