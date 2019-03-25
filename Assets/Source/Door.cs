@@ -47,8 +47,8 @@ public class Door
         /// <summary>
         /// Создаются объект пустышки и объект тела двери.
         /// </summary>
-        doorController = Object.Instantiate(Resources.Load(door_controller, typeof(GameObject))) as GameObject;
-        doorBody = Object.Instantiate(Resources.Load(door_body, typeof(GameObject))) as GameObject;
+        doorController = Object.Instantiate(Prefabs.Load(door_controller, typeof(GameObject))) as GameObject;
+        doorBody = Object.Instantiate(Prefabs.Load(door_body, typeof(GameObject))) as GameObject;
 
         shift(isLeft);
 
